@@ -1,0 +1,10 @@
+#!/usr/bin/ruby
+require 'fileutils'
+
+sleep 5
+
+begin
+  FileUtils.rm("public/generated_fractals/#{ARGV[0]}.png")
+rescue Errno::ENOENT => e
+  STDOUT.puts e.message
+end
