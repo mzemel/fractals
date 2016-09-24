@@ -3,7 +3,7 @@ require 'pry'
 module Fractals
   class App
     def initialize
-      @filenames = ['', '.html', 'index.html', '/index.html', '/']
+      @filenames = ['', '.html', 'index.html', '/index.html', '/', '/info.txt']
       @rack_static = ::Rack::Static.new(
         lambda { [404, {}, []] }, {
           :root => File.expand_path('../public', __FILE__),
